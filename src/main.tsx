@@ -10,7 +10,7 @@ import App from './App.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ApolloProvider client={apolloClient}>
-      <BrowserRouter>
+      <BrowserRouter basename="/React-alphacore-task">
         <App />
       </BrowserRouter>
     </ApolloProvider>

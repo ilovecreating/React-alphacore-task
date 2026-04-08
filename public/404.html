@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script>
+      // SPA redirect for GitHub Pages
+      // Converts path to query string so index.html can restore it
+      var repo = '/React-alphacore-task';
+      var path = window.location.pathname.slice(repo.length);
+      var search = window.location.search;
+      var hash = window.location.hash;
+      window.location.replace(
+        window.location.origin + repo + '/?p=' + encodeURIComponent(path + search + hash)
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
