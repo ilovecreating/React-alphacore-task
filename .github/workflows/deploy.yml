@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
+      - run: |
+          echo '@alphacore:registry=https://gitlab.alphacore.ru/api/v4/projects/15/packages/npm/' > .npmrc
+          echo '//gitlab.alphacore.ru/api/v4/projects/15/packages/npm/:_authToken=${{ secrets.GITLAB_NPM_TOKEN }}' >> .npmrc
       - run: npm ci
       - run: npm run build
       - uses: actions/configure-pages@v4
