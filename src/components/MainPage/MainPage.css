@@ -1,0 +1,150 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  width: 1420px;
+  max-width: 100%;
+  height: 100vh;
+  margin: 100px 0 auto;
+  background: var(--color-5);
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 30px;
+  flex-shrink: 0;
+  gap: 16px;
+}
+
+.top-bar-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  color: var(--color-3);
+  white-space: nowrap;
+}
+
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 450px;
+  min-width: 250px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-panel {
+  flex: 1;
+  overflow: auto;
+  margin-top: 60px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.error-msg {
+  color: var(--color-2);
+  padding: 16px 24px;
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .main-page {
+    margin: 40px 0 auto;
+  }
+
+  .sidebar {
+    width: 350px;
+  }
+
+  .top-bar {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-page {
+    margin: 20px 0 auto;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    max-height: 50vh;
+    border-bottom: 1px solid var(--color-4);
+  }
+
+  .details-panel {
+    margin-top: 0;
+  }
+
+  .top-bar {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+
+  .top-bar-right {
+    flex: 1;
+    min-width: 0;
+    justify-content: flex-end;
+  }
+
+  .top-bar-title {
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 850px) {
+  .top-bar {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .top-bar-title {
+    width: 100%;
+  }
+
+  .top-bar-right {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-page {
+    margin: 10px 0 auto;
+  }
+
+  .top-bar {
+    padding: 8px 12px;
+  }
+
+  .sidebar {
+    max-height: 40vh;
+  }
+}
